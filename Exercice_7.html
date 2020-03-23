@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+    <link href="Exercice_7.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Contact Administrateur</h2>
+        </div>
+        <form onsubmit="return validate()" id="myForm" action="validation.html" class="form">
+            <div class="form-control">
+                <label for="username">Societé</label>
+                <input type="text" name="sname" id="society">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="username">Resposable</label>
+                <input type="text" placeholder="Frank" id="personne" name="personne" onKeyUp="lettersOnly(this)"/>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="adresse">Adresse</label>
+                <input type="text" name="adresse" id="adresse" placeholder="Adresse de l'entreprise">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="postal">Code Postal</label>
+                <input type="text" name="postal" id="postal" placeholder="80080">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="ville">Ville</label>
+                <input type="text" name="ville" id="ville" placeholder="Amiens">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="telephone">Telephone</label>
+                <input type="text" name="telephone" id="telephone" placeholder="0645789452" onKeyUp="numbersOnly(this)">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>Sèlectionnez l'environnement technique du projet :</label>
+                <select name="mess">
+                    <option value="1">Choisissez</option>
+                    <option value="2">HTML</option>
+                    <option value="3">CSS</option>
+                    <option value="4">Javscript</option>
+                    <option value="5">PHP</option>
+                </select>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <textarea name="description" placeholder="Description"></textarea>
+            </div>
+            <div class="form-control">
+                <label for="username">Email</label>
+                <input type="email" placeholder="fenogieru100gmail.com" id="email" name="email" />
+                <small>Error message</small>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+
+        </form>
+    </div>
+    <script src="Exercice_7.js"></script>
+</body>
+
+</html>
